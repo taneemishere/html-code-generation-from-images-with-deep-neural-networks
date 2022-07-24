@@ -31,6 +31,7 @@ This automated AI system generates the HTML code right directly from uploading a
 ```
 
 ## Usage
+
  ***
 > Prepare the Dataset
 
@@ -52,6 +53,7 @@ cd ../model
 ```
 
 > Model Training
+
 ```
 cd model
 
@@ -65,15 +67,29 @@ cd model
 # train with autoencoder
 ./train.py ../datasets/web/training_features ../bin 1
 ```
-## Data Folder
 
-```cd data``` \
-```cat all_data.zip.* > all_data.zip``` \
-```unzip all_data.zip```
+> Generate Code for an Image
 
-```python split_dataset.py``` \
-```python prepare_data.py```
+```
+mkdir generated-output
+cd model
 
-## Trainer Folder
+# generate DSL code aka the .gui file, the default search method is greedy
+# usage: sample.py <trained weights path> <trained model name> <input image> <output path> <search method (default: greedy)>
+./sample.py ../bin pix2code2 ../test_gui.png ../generated-output
 
-```python trainer.py ../results```
+# equivalent to command above
+./sample.py ../bin pix2code2 ../test_gui.png ../code greedy
+
+# generation with beam search is coming soon
+```
+
+> Compile the .gui code to HTML
+
+```
+cd compiler
+
+# compile .gui file to HTML/CSS (Bootstrap style)
+# usage: web-compiler.py <input file path>.gui
+./web-compiler.py ../generated-output/dot_gui.file
+```
