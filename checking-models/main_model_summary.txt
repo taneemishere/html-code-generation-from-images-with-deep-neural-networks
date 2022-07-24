@@ -1,0 +1,39 @@
+Model: "model_2"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to
+==================================================================================================
+ input_1 (InputLayer)           [(None, 256, 256, 3  0           []
+                                )]
+
+ model_2 (Functional)           (None, 32, 32, 128)  287008      ['input_1[0][0]']
+
+ flatten_1 (Flatten)            (None, 131072)       0           ['model_2[0][0]']
+
+ dense_1 (Dense)                (None, 1024)         134218752   ['flatten_1[0][0]']
+
+ dropout_6 (Dropout)            (None, 1024)         0           ['dense_1[0][0]']
+
+ dense_2 (Dense)                (None, 1024)         1049600     ['dropout_6[0][0]']
+
+ dropout_7 (Dropout)            (None, 1024)         0           ['dense_2[0][0]']
+
+ input_3 (InputLayer)           [(None, 48, 19)]     0           []
+
+ repeat_vector_1 (RepeatVector)  (None, 48, 1024)    0           ['dropout_7[0][0]']
+
+ sequential (Sequential)        (None, 48, 128)      207360      ['input_3[0][0]']
+
+ concatenate_1 (Concatenate)    (None, 48, 1152)     0           ['repeat_vector_1[0][0]',
+                                                                  'sequential[0][0]']
+
+ lstm_3 (LSTM)                  (None, 48, 512)      3409920     ['concatenate_1[0][0]']
+
+ lstm_4 (LSTM)                  (None, 512)          2099200     ['lstm_3[0][0]']
+
+ dense_3 (Dense)                (None, 19)           9747        ['lstm_4[0][0]']
+
+==================================================================================================
+Total params: 141,281,587
+Trainable params: 140,994,579
+Non-trainable params: 287,008
+__________________________________________________________________________________________________

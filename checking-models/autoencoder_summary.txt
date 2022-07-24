@@ -1,0 +1,71 @@
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ input_1 (InputLayer)        [(None, 256, 256, 3)]     0
+
+ conv2d_1 (Conv2D)           (None, 256, 256, 32)      896
+
+ conv2d_2 (Conv2D)           (None, 256, 256, 32)      9248
+
+ max_pooling2d_1 (MaxPooling  (None, 128, 128, 32)     0
+ 2D)
+
+ dropout_1 (Dropout)         (None, 128, 128, 32)      0
+
+ conv2d_3 (Conv2D)           (None, 128, 128, 64)      18496
+
+ conv2d_4 (Conv2D)           (None, 128, 128, 64)      36928
+
+ max_pooling2d_2 (MaxPooling  (None, 64, 64, 64)       0
+ 2D)
+
+ dropout_2 (Dropout)         (None, 64, 64, 64)        0
+
+ conv2d_5 (Conv2D)           (None, 64, 64, 128)       73856
+
+ conv2d_6 (Conv2D)           (None, 64, 64, 128)       147584
+
+ max_pooling2d_3 (MaxPooling  (None, 32, 32, 128)      0
+ 2D)
+
+ encoded_layer (Dropout)     (None, 32, 32, 128)       0
+
+ conv2d_transpose_1 (Conv2DT  (None, 32, 32, 128)      147584
+ ranspose)
+
+ conv2d_transpose_2 (Conv2DT  (None, 32, 32, 128)      147584
+ ranspose)
+
+ up_sampling2d_1 (UpSampling  (None, 64, 64, 128)      0
+ 2D)
+
+ dropout_3 (Dropout)         (None, 64, 64, 128)       0
+
+ conv2d_transpose_3 (Conv2DT  (None, 64, 64, 64)       73792
+ ranspose)
+
+ conv2d_transpose_4 (Conv2DT  (None, 64, 64, 64)       36928
+ ranspose)
+
+ up_sampling2d_2 (UpSampling  (None, 128, 128, 64)     0
+ 2D)
+
+ dropout_4 (Dropout)         (None, 128, 128, 64)      0
+
+ conv2d_transpose_5 (Conv2DT  (None, 128, 128, 32)     18464
+ ranspose)
+
+ conv2d_transpose_6 (Conv2DT  (None, 128, 128, 3)      867
+ ranspose)
+
+ up_sampling2d_3 (UpSampling  (None, 256, 256, 3)      0
+ 2D)
+
+ dropout_5 (Dropout)         (None, 256, 256, 3)       0
+
+=================================================================
+Total params: 712,227
+Trainable params: 712,227
+Non-trainable params: 0
+_________________________________________________________________
