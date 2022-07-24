@@ -87,10 +87,10 @@ cd model
 
 # generate DSL code aka the .gui file, the default search method is greedy
 # usage: sample.py <trained weights path> <trained model name> <input image> <output path> <search method (default: greedy)>
-./sample.py ../bin pix2code2 ../test_gui.png ../generated-output
+./sample.py ../bin main-model ../test_gui.png ../generated-output
 
 # equivalent to command above
-./sample.py ../bin pix2code2 ../test_gui.png ../code greedy
+./sample.py ../bin main-model ../test_gui.png ../code greedy
 
 # generation with beam search is coming soon
 ```

@@ -1,4 +1,4 @@
-__author__ = 'Ferdinand John Briones, attempt at pix2code2 through pretrained autoencoders'
+__author__ = 'Taneem Jan, attempt at main-model through pretrained autoencoders'
 
 from keras.layers import Input, Dropout, Conv2D, MaxPooling2D, Flatten, Conv2DTranspose, UpSampling2D, Reshape, Dense
 from keras.models import Sequential, Model

@@ -9,7 +9,7 @@ from .Config import *
 from .AModel import *
 from .autoencoder_image import *
 
-class pix2code2(AModel):
+class main-model(AModel):
 	def __init__(self, input_shape, output_size, output_path):
 		AModel.__init__(self, input_shape, output_size, output_path)
 		self.name = "pix2code2"
