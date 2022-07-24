@@ -4,7 +4,13 @@ This automated AI system generates the HTML code right directly from uploading a
 
 The research work and project is done in my undergrad thesis, you can find it here on [my site](https://taneemishere.github.io/projects/project-one.html).
 
-> Live demo is coming really soon ... ! 
+> Live demo is coming really soon ... !
+
+## The Architecture
+
+![Architecture](https://raw.githubusercontent.com/taneemishere/html-code-generation-from-images-with-deep-neural-networks/main/resources-for-md/My-FYP-Work.png)
+
+Here is this achitecture, the upper Encoder and Decoder are the part of the AutoEncoder<sup>1</sup>, while the rest of the model is part of what we called the Main Model. We give the model, the Images and the MockUps which are speicified as Input Image and Input Code respectively, the MockUps are the DSL Code or the Domain Specific Language. At last the sequential LSTM layers give the generated code, speicified as Output Code here. And this output code is the generated as a dot gui file which is then complied into proper HTML code.
 
 ## Project Structure
 
@@ -57,7 +63,6 @@ The dataset is splitted into two sets:
 - Training :: 1500 pair of image and markups placed in ```datasets/train/```
 - Evaluation :: 250 pair of image and markups placed in ```datasets/eval/```
 
-
 > Model Training
 
 ```
@@ -102,6 +107,8 @@ cd compiler
 
 ### Aknowledgement
 
-This project done in on top of the original work by Tony Beltramelli's [Paper](https://arxiv.org/pdf/1705.07962.pdf) and the [Datasets](https://github.com/tonybeltramelli/pix2code/tree/master/datasets) from him.
+- This project done in on top of the original work by Tony Beltramelli's [Paper](https://arxiv.org/pdf/1705.07962.pdf) and the [Datasets](https://github.com/tonybeltramelli/pix2code/tree/master/datasets) from him.
 
-Other references coming soon 👍
+- [1] for more information about the AutoEncoders, refer to chapter 14 of the [Deep Learning Book](https://www.deeplearningbook.org/contents/autoencoders.html) by Ian Goodfellow, Yoshua Bengio and Aaron Courville.
+
+- Other references coming soon 👍
