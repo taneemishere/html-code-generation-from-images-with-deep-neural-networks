@@ -32,7 +32,7 @@ This automated AI system generates the HTML code right directly from uploading a
 
 ## Usage
 
- ***
+ 
 > Prepare the Dataset
 
 ```
