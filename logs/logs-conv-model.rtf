@@ -1,0 +1,77 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2638
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs38 \cf2 \CocoaLigature0 Model: "model"\
+_________________________________________________________________\
+ Layer (type)                Output Shape              Param #   \
+=================================================================\
+ input_2 (InputLayer)        [(None, 256, 256, 3)]     0         \
+                                                                 \
+ conv2d (Conv2D)             (None, 256, 256, 32)      896       \
+                                                                 \
+ conv2d_1 (Conv2D)           (None, 256, 256, 32)      9248      \
+                                                                 \
+ max_pooling2d (MaxPooling2D  (None, 128, 128, 32)     0         \
+ )                                                               \
+                                                                 \
+ dropout (Dropout)           (None, 128, 128, 32)      0         \
+                                                                 \
+ conv2d_2 (Conv2D)           (None, 128, 128, 64)      18496     \
+                                                                 \
+ conv2d_3 (Conv2D)           (None, 128, 128, 64)      36928     \
+                                                                 \
+ max_pooling2d_1 (MaxPooling  (None, 64, 64, 64)       0         \
+ 2D)                                                             \
+                                                                 \
+ dropout_1 (Dropout)         (None, 64, 64, 64)        0         \
+                                                                 \
+ conv2d_4 (Conv2D)           (None, 64, 64, 128)       73856     \
+                                                                 \
+ conv2d_5 (Conv2D)           (None, 64, 64, 128)       147584    \
+                                                                 \
+ max_pooling2d_2 (MaxPooling  (None, 32, 32, 128)      0         \
+ 2D)                                                             \
+                                                                 \
+ encoded_layer (Dropout)     (None, 32, 32, 128)       0         \
+                                                                 \
+ conv2d_transpose (Conv2DTra  (None, 32, 32, 128)      147584    \
+ nspose)                                                         \
+                                                                 \
+ conv2d_transpose_1 (Conv2DT  (None, 32, 32, 128)      147584    \
+ ranspose)                                                       \
+                                                                 \
+ up_sampling2d (UpSampling2D  (None, 64, 64, 128)      0         \
+ )                                                               \
+                                                                 \
+ dropout_2 (Dropout)         (None, 64, 64, 128)       0         \
+                                                                 \
+ conv2d_transpose_2 (Conv2DT  (None, 64, 64, 64)       73792     \
+ ranspose)                                                       \
+                                                                 \
+ conv2d_transpose_3 (Conv2DT  (None, 64, 64, 64)       36928     \
+ ranspose)                                                       \
+                                                                 \
+ up_sampling2d_1 (UpSampling  (None, 128, 128, 64)     0         \
+ 2D)                                                             \
+                                                                 \
+ dropout_3 (Dropout)         (None, 128, 128, 64)      0         \
+                                                                 \
+ conv2d_transpose_4 (Conv2DT  (None, 128, 128, 32)     18464     \
+ ranspose)                                                       \
+                                                                 \
+ conv2d_transpose_5 (Conv2DT  (None, 128, 128, 3)      867       \
+ ranspose)                                                       \
+                                                                 \
+ up_sampling2d_2 (UpSampling  (None, 256, 256, 3)      0         \
+ 2D)                                                             \
+                                                                 \
+ dropout_4 (Dropout)         (None, 256, 256, 3)       0         \
+                                                                 \
+=================================================================\
+Total params: 712,227\
+Trainable params: 712,227\
+Non-trainable params: 0}
