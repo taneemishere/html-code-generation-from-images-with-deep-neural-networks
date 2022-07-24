@@ -2,6 +2,8 @@
 
 This automated AI system generates the HTML code right directly from uploading a UI/MockUp image to the system. There are two parts here, the encoder part captures and features the images and encode it into inner codes and features and learn the UIs, the decoder part learn the coded bootstrap code provided for that image and learn the stream while learning or training, and then concatenate the both the inner features from encoder and decoder. Then at the last the LSTMs takes those inner features and generates the intermediate bootstrap code as a result, which is then compiled into HTML code through a web compiler. The results achieved here, are higher than that of the expectations even at the evaluation set.
 
+The research work and project is done in my undergrad thesis, you can find it here on [my site](https://taneemishere.github.io/projects/project-one.html).
+
 > Live demo is coming really soon ... ! 
 
 ## Project Structure
@@ -93,13 +95,13 @@ cd model
 ```
 cd compiler
 
-# compile .gui file to HTML/CSS (Bootstrap style)
+# compile .gui file to HTML (Bootstrap style)
 # usage: web-compiler.py <input file path>.gui
 ./web-compiler.py ../generated-output/dot_gui.file
 ```
 
 ### Aknowledgement
 
-This project done in on top of the original work by Tony Beltramelli's [Paper](https://arxiv.org/pdf/1705.07962.pdf).
+This project done in on top of the original work by Tony Beltramelli's [Paper](https://arxiv.org/pdf/1705.07962.pdf) and the [Datasets](https://github.com/tonybeltramelli/pix2code/tree/master/datasets) from him.
 
 Other references coming soon 👍
