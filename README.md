@@ -1,6 +1,6 @@
 # HTML Code Generation from Images With Deep Neural Networks
 
-This automated AI system generates the HTML code right directly from uploading a UI/MockUp image to the system. There are two parts here, the encoder part captures and features the images and encode it into inner codes and features and learn the UIs, the decoder part learn the coded bootstrap code provided for that image and learn the stream while learning or training, and then concatenate the both the inner features from encoder and decoder. Then at the last the LSTMs takes those inner features and generates the intermediate bootstrap code as a result, which is then compiled into HTML code through a web compiler. The results achieved here, are higher than that of the expectations even at the evaluation set.
+Writing code in a programming language for a designed graphical user interface created by, is done mostly by developers to build and develop custom websites and software. The development work is not approachable by those unfamiliar with programming, to drive these personas capable of developing the code bases we come up with an automated system. Here we proposed that methods of deep learning and computer vision techniques can be grasped to train a model that will automatically generate HTML code from a single input mockup image and try to build an end-to-end automated system with a good amount of accuracy for developing web pages.
 
 The research work and project is done in my undergrad thesis, you can find it here on [my site](https://taneemishere.github.io/projects/project-one.html).
 
@@ -8,9 +8,9 @@ The research work and project is done in my undergrad thesis, you can find it he
 
 ## The Architecture
 
-![Architecture](https://raw.githubusercontent.com/taneemishere/html-code-generation-from-images-with-deep-neural-networks/main/resources-for-md/My-FYP-Work.png)
-
-Here is this achitecture, the upper Encoder and Decoder are the part of the AutoEncoder<sup>1</sup>, while the rest of the model is part of what we called the Main Model. We give the model, the Images and the MockUps which are speicified as Input Image and Input Code respectively, the MockUps are the DSL Code or the Domain Specific Language. At last the sequential LSTM layers give the generated code, speicified as Output Code here. And this output code is the generated as a dot gui file which is then complied into proper HTML code.
+![Architecture](https://raw.githubusercontent.com/taneemishere/html-code-generation-from-images-with-deep-neural-networks/main/resources-for-md/My-FYP-Work.png) 
+As a whole the model is of two parts, the ```autoencoder``` part which captures the images and encode it into inner features and then the decoder tries to regenerates the input image from those lower level features. The language model, which we called as the ```main-model``` that recieves the input as intermediate code of that input UI, which is the coded bootstrap elements to what we called as the ```DSL Code```, this part learns the stream of elements via sequential learning provided in embeddings. Then both results of inner features from autoencoder and sequential model are concatenated. At last the LSTMs, which are part of the main-model, take those inner features and generates the intermediate bootstrap code as a result, which is then compiled into HTML code through a web compiler..
+For tranied model and weights if you need, drop me an email.
 
 ## Project Structure
 
@@ -37,7 +37,7 @@ Here is this achitecture, the upper Encoder and Decoder are the part of the Auto
 
 ```
 
-## Usage
+## How to Use?
 
 > Prepare the Dataset
 
@@ -107,8 +107,6 @@ cd compiler
 
 ### Aknowledgement
 
-- This project done in on top of the original work by Tony Beltramelli's [Paper](https://arxiv.org/pdf/1705.07962.pdf) and the [Datasets](https://github.com/tonybeltramelli/pix2code/tree/master/datasets) from him.
+- This project is done on top of the original work by Tony Beltramelli's [Paper](https://arxiv.org/pdf/1705.07962.pdf) and the [Datasets](https://github.com/tonybeltramelli/pix2code/tree/master/datasets) from him.
 
-- [1] for more information about the AutoEncoders, refer to chapter 14 of the [Deep Learning Book](https://www.deeplearningbook.org/contents/autoencoders.html) by Ian Goodfellow, Yoshua Bengio and Aaron Courville.
-
-- Other references coming soon 👍
+- 👍

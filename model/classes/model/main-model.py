@@ -12,7 +12,7 @@ from .autoencoder_image import *
 class main-model(AModel):
 	def __init__(self, input_shape, output_size, output_path):
 		AModel.__init__(self, input_shape, output_size, output_path)
-		self.name = "pix2code2"
+		self.name = "main-model"
 
 		visual_input = Input(shape=input_shape)
 

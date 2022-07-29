@@ -9,7 +9,7 @@ sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
 import sys
 
 from classes.dataset.Generator import *
-from classes.model.pix2code2 import *
+from classes.model.main-model import *
 from classes.model.autoencoder_image import *
 from keras.backend import clear_session
 
@@ -43,8 +43,8 @@ def run(input_path, output_path, train_autoencoder=False):
         autoencoder_model.fit_generator(generator_images, steps_per_epoch=steps_per_epoch)
         clear_session()
     
-	#Model for training pix2code2
-    model = pix2code2(input_shape, output_size, output_path)
+	#Training of our main-model
+    model = main-model(input_shape, output_size, output_path)
     model.fit_generator(generator, steps_per_epoch=steps_per_epoch)
 
 if __name__ == "__main__":
