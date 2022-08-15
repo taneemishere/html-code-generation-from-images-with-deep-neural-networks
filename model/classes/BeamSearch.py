@@ -1,5 +1,6 @@
 from __future__ import print_function
-__author__ = 'Taneem Jan'
+
+__author__ = 'Taneem Jan, taneemishere.github.io'
 
 
 class Node:

@@ -2,7 +2,8 @@ from __future__ import print_function
 from __future__ import absolute_import
 
 __author__ = 'Tony Beltramelli - www.tonybeltramelli.com :: original author of the paper'
-__author__ = 'Taneem Jan of modified version'
+# for modified version
+__author__ = 'Taneem Jan, taneemishere.github.io'
 
 import tensorflow as tf
 

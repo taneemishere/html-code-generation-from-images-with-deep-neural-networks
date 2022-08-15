@@ -1,4 +1,4 @@
-__author__ = 'Taneem Jan'
+__author__ = 'Taneem Jan, taneemishere.github.io'
 
 from keras.models import model_from_json
 

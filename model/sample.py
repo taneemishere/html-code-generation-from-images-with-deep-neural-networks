@@ -1,7 +1,9 @@
 from __future__ import print_function
 from __future__ import absolute_import
-__author__ = 'Taneem Jan'
-#modified code
+
+# Modified version
+__author__ = 'Taneem Jan, taneemishere.github.io'
+
 
 import sys
 

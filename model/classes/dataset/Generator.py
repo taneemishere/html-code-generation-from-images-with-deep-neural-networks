@@ -1,11 +1,10 @@
 from __future__ import print_function
 
-__author__ = 'Taneem Jan'
+# Modified version
+__author__ = 'Taneem Jan, taneemishere.github.io'
 
-# modified version :: generator for autoencoder
 
 import numpy as np
-
 from model.classes.dataset.Dataset import *
 from model.classes.Vocabulary import *
 from model.classes.model.Config import *

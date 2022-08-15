@@ -1,4 +1,4 @@
-__author__ = 'Taneem Jan'
+__author__ = 'Taneem Jan, taneemishere.github.io'
 
 # import the module from keras to load a saved model
 from keras.models import load_model, model_from_json

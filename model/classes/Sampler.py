@@ -1,6 +1,7 @@
 from __future__ import print_function
 from __future__ import absolute_import
-__author__ = 'Taneem Jan'
+
+__author__ = 'Taneem Jan, taneemishere.github.io'
 
 from .Vocabulary import *
 from .BeamSearch import *

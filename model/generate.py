@@ -1,8 +1,9 @@
 from __future__ import print_function
 from __future__ import absolute_import
-__author__ = 'Taneem Jan'
 
-# modified version of the original model from paper for better results
+# Modified version
+__author__ = 'Taneem Jan, taneemishere.github.io'
+
 
 import os
 import sys

@@ -1,4 +1,5 @@
-__author__ = 'Taneem Jan, attempt at main-model through pretrained autoencoders'
+# Modified version
+__author__ = 'Taneem Jan, taneemishere.github.io'
 
 from keras.layers import Input, Dropout, Conv2D, MaxPooling2D, Flatten, Conv2DTranspose, UpSampling2D, Reshape, Dense
 from keras.models import Sequential, Model

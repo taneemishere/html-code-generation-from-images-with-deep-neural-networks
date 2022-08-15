@@ -1,8 +1,9 @@
 from __future__ import print_function
-__author__ = 'Taneem Jan'
+
+__author__ = 'Taneem Jan, taneemishere.github.io'
+
 
 import os
-
 from model.classes.Vocabulary import *
 from model.classes.Utils import *
 from model.classes.model.Config import *

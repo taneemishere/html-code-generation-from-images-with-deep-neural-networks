@@ -1,4 +1,5 @@
-__author__ = 'Taneem Jan using the auto-encoder version'
+# Modified version
+__author__ = 'Taneem Jan, taneemishere.github.io'
 
 from keras.layers import Input, Dense, Dropout, RepeatVector, LSTM, concatenate, Flatten
 from keras.models import Sequential, Model
