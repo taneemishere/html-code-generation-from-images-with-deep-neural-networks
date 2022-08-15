@@ -1,6 +1,6 @@
 # HTML Code Generation from Images With Deep Neural Networks
 
-Writing code in a programming language for a designed graphical user interface created by, is done mostly by developers to build and develop custom websites and software. The development work is not approachable by those unfamiliar with programming, to drive these personas capable of developing the code bases we come up with an automated system. Here we proposed that methods of deep learning and computer vision techniques can be grasped to train a model that will automatically generate HTML code from a single input mockup image and try to build an end-to-end automated system with a good amount of accuracy for developing web pages.
+Writing code in a programming language for a designed graphical user interface created by, is done mostly by developers to build and develop custom websites and software. The development work is not approachable by those unfamiliar with programming, to drive these personas capable of developing the code bases we come up with an automated system. Here we proposed that methods of deep learning and computer vision techniques can be grasped to train a model that will automatically generate HTML codes from a single input mockup image and try to build an end-to-end automated system with a good amount of accuracy for developing web pages.
 
 The research work and project is done in my undergrad thesis, you can find it here on [my site](https://taneemishere.github.io/projects/project-one.html).
 
@@ -9,7 +9,7 @@ The research work and project is done in my undergrad thesis, you can find it he
 ## The Architecture
 
 ![Architecture](https://raw.githubusercontent.com/taneemishere/html-code-generation-from-images-with-deep-neural-networks/main/resources-for-md/model-architecture.png)
-As a whole the model is of two parts, the ```autoencoder``` part which captures the images and encode it into inner features and then the decoder tries to regenerate the input image from those lower level features. The language model, which we called as the ```Main_Model``` that receives the input as intermediate code of that input UI, which is the coded bootstrap elements to what we called as the ```DSL Code```, this part learns the stream of elements via sequential learning provided in embeddings. Then both results of inner features from autoencoder and sequential model are concatenated. At last the LSTMs, which are part of the Main_Model, take those inner features and generates the intermediate code as a result, which is then compiled into HTML code through a web compiler.
+While training, the AI model receives the images which are passed to the ```Autoencoders``` and it is the first part of the whole model where it is pretrained on the images before the model learns about the code. The autoencoder learns the inner features and recreate the images but with lower dimension and transformed space representation. The second part of our model receives the input code for a mockup image in the form of an intermediate representation of actual code, ```DSL Code``` which is less intensive to the model in learning, feature mapping and helps in controlling the over-fitting problems which are then represented into embeddings, created by a sequential network. The learned parameters from autoencoder and the sequence network are concatenated in the middle layer which is then passed to a recurrent network that learn the parameters and mappings in between the image and the code. Apart from the autoencoder network, the rest of the model is what we called the ```Main_Model```.
 <br>For trained model and weights if you need, drop me an email.
 
 ## Project Structure
@@ -58,7 +58,7 @@ cd ../model
 ./convert_imgs_to_arrays.py ../datasets/web/training_set ../datasets/web/training_features
 ```
 
-The dataset is splitted into two sets:
+The dataset is split into two sets:
 
 - Training :: 1500 pair of image and markups placed in ```datasets/train/```
 - Evaluation :: 250 pair of image and markups placed in ```datasets/eval/```
