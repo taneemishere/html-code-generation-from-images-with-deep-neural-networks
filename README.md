@@ -8,9 +8,9 @@ The research work and project is done in my undergrad thesis, you can find it he
 
 ## The Architecture
 
-![Architecture](https://raw.githubusercontent.com/taneemishere/html-code-generation-from-images-with-deep-neural-networks/main/resources-for-md/My-FYP-Work.png) 
-As a whole the model is of two parts, the ```autoencoder``` part which captures the images and encode it into inner features and then the decoder tries to regenerates the input image from those lower level features. The language model, which we called as the ```main-model``` that recieves the input as intermediate code of that input UI, which is the coded bootstrap elements to what we called as the ```DSL Code```, this part learns the stream of elements via sequential learning provided in embeddings. Then both results of inner features from autoencoder and sequential model are concatenated. At last the LSTMs, which are part of the main-model, take those inner features and generates the intermediate bootstrap code as a result, which is then compiled into HTML code through a web compiler..
-For tranied model and weights if you need, drop me an email.
+![Architecture](https://raw.githubusercontent.com/taneemishere/html-code-generation-from-images-with-deep-neural-networks/main/resources-for-md/model-architecture.png)
+As a whole the model is of two parts, the ```autoencoder``` part which captures the images and encode it into inner features and then the decoder tries to regenerate the input image from those lower level features. The language model, which we called as the ```main-model``` that receives the input as intermediate code of that input UI, which is the coded bootstrap elements to what we called as the ```DSL Code```, this part learns the stream of elements via sequential learning provided in embeddings. Then both results of inner features from autoencoder and sequential model are concatenated. At last the LSTMs, which are part of the main-model, take those inner features and generates the intermediate bootstrap code as a result, which is then compiled into HTML code through a web compiler.
+<br>For trained model and weights if you need, drop me an email.
 
 ## Project Structure
 
@@ -105,7 +105,7 @@ cd compiler
 ./web-compiler.py ../generated-output/dot_gui.file
 ```
 
-### Aknowledgement
+### Acknowledgement
 
 - This project is done on top of the original work by Tony Beltramelli's [Paper](https://arxiv.org/pdf/1705.07962.pdf) and the [Datasets](https://github.com/tonybeltramelli/pix2code/tree/master/datasets) from him.
 

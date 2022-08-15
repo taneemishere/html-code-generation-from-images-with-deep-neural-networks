@@ -1,12 +1,13 @@
- __author__ = 'Taneem Jan'
- 
 from __future__ import print_function
 from __future__ import absolute_import
+
+__author__ = 'Taneem Jan'
 
 import pdb
 import os
 import operator
 from nltk.translate.bleu_score import sentence_bleu, corpus_bleu
+
 
 class Evaluator:
     def __init__(self):

@@ -1,4 +1,4 @@
- __author__ = 'Taneem Jan'
+__author__ = 'Taneem Jan'
 
 CONTEXT_LENGTH = 48
 IMAGE_SIZE = 256

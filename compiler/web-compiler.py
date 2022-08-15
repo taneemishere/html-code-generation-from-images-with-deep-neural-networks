@@ -1,5 +1,6 @@
 from __future__ import print_function
- __author__ = 'Taneem Jan'
+
+__author__ = 'Taneem Jan'
 
 import sys
 
@@ -34,6 +35,7 @@ def render_content_with_text(key, value):
             value = value.replace(TEXT_PLACE_HOLDER,
                                   Utils.get_random_text(length_text=56, space_number=7, with_upper_case=False))
     return value
+
 
 file_uid = basename(input_file)[:basename(input_file).find(".")]
 path = input_file[:input_file.find(file_uid)]

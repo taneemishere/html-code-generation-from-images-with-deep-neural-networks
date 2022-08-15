@@ -1,12 +1,13 @@
 from __future__ import print_function
- __author__ = 'Taneem Jan'
+
+__author__ = 'Taneem Jan'
 #modified version :: generator for autoencoder
 
 import numpy as np
 
-from classes.dataset.Dataset import *
-from classes.Vocabulary import *
-from classes.model.Config import *
+from model.classes.dataset.Dataset import *
+from model.classes.Vocabulary import *
+from model.classes.model.Config import *
 
 
 class Generator:

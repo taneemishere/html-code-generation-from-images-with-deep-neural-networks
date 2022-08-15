@@ -1,11 +1,11 @@
 from __future__ import print_function
- __author__ = 'Taneem Jan'
+__author__ = 'Taneem Jan'
 
 import os
 
-from classes.Vocabulary import *
-from classes.Utils import *
-from classes.model.Config import *
+from model.classes.Vocabulary import *
+from model.classes.Utils import *
+from model.classes.model.Config import *
 
 
 class Dataset:

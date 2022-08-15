@@ -1,19 +1,20 @@
 from __future__ import print_function
 from __future__ import absolute_import
- __author__ = 'Taneem Jan'
+__author__ = 'Taneem Jan'
 #modified code
 
 import sys
 
 from os.path import basename
 from classes.Sampler import *
-from classes.model.main-model import *
+from classes.model.Main_Model import *
 
 argv = sys.argv[1:]
 
 if len(argv) < 4:
     print("Error: not enough argument supplied:")
-    print("sample.py <trained weights path> <trained model name> <input image> <output path> <search method (default: greedy)>")
+    print("sample.py <trained weights path> <trained model name> <input image> <output path> <search method (default: "
+          "greedy)>")
     exit(0)
 else:
     trained_weights_path = argv[0]

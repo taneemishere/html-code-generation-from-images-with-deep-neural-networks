@@ -1,19 +1,22 @@
 from __future__ import print_function
 from __future__ import absolute_import
+
 __author__ = 'Tony Beltramelli - www.tonybeltramelli.com :: original author of the paper'
- __author__ = 'Taneem Jan of modified version'
+__author__ = 'Taneem Jan of modified version'
 
 import tensorflow as tf
+
 sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
 
 import sys
 
 from classes.dataset.Generator import *
-from classes.model.main-model import *
+from classes.model.Main_Model import *
 from classes.model.autoencoder_image import *
 from keras.backend import clear_session
 
-#removed some training parameters, so as to make the code input easier
+
+# removed some training parameters, to make the code input easier
 def run(input_path, output_path, train_autoencoder=False):
     np.random.seed(1234)
 
@@ -31,21 +34,24 @@ def run(input_path, output_path, train_autoencoder=False):
     voc = Vocabulary()
     voc.retrieve(output_path)
 
-	
-    generator = Generator.data_generator(voc, gui_paths, img_paths, batch_size=BATCH_SIZE, input_shape=input_shape, generate_binary_sequences=True)
-	
-	#Included a generator for images only as an input for autoencoders
-    generator_images = Generator.data_generator(voc, gui_paths, img_paths, batch_size=BATCH_SIZE, input_shape=input_shape, generate_binary_sequences=True, images_only=True)
+    generator = Generator.data_generator(voc, gui_paths, img_paths, batch_size=BATCH_SIZE, input_shape=input_shape,
+                                         generate_binary_sequences=True)
 
-	#For training of autoencoders 
+    # Included a generator for images only as an input for autoencoders
+    generator_images = Generator.data_generator(voc, gui_paths, img_paths, batch_size=BATCH_SIZE,
+                                                input_shape=input_shape, generate_binary_sequences=True,
+                                                images_only=True)
+
+    # For training of autoencoders
     if train_autoencoder:
         autoencoder_model = autoencoder_image(input_shape, input_shape, output_path)
         autoencoder_model.fit_generator(generator_images, steps_per_epoch=steps_per_epoch)
         clear_session()
-    
-	#Training of our main-model
-    model = main-model(input_shape, output_size, output_path)
+
+    # Training of our main-model
+    model = Main_Model(input_shape, output_size, output_path)
     model.fit_generator(generator, steps_per_epoch=steps_per_epoch)
+
 
 if __name__ == "__main__":
     argv = sys.argv[1:]

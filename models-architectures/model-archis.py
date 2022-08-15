@@ -1,3 +1,5 @@
+__author__ = 'Taneem Jan'
+
 # import the module from keras to load a saved model
 from keras.models import load_model, model_from_json
 from keras.utils.vis_utils import plot_model
@@ -26,7 +28,7 @@ from keras.utils.vis_utils import plot_model
 # print("Saved model to disk")
 
 # load json and create model
-json_file = open('../bin/pix2code2.json', 'r')
+json_file = open('../bin/Main_Model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 loaded_model = model_from_json(loaded_model_json)
@@ -34,7 +36,7 @@ loaded_model = model_from_json(loaded_model_json)
 print("Loaded json model from disk")
 
 # load weight into new model
-loaded_model.load_weights("../bin/pix2code2.h5")
+loaded_model.load_weights("../bin/Main_Model.h5")
 print("Loaded weights into new model")
 
 print(loaded_model.summary())

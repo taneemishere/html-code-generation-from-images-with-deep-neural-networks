@@ -1,13 +1,11 @@
- __author__ = 'Taneem Jan'
- 
 from __future__ import print_function
 from __future__ import absolute_import
 
-from argparse import ArgumentParser
-from nltk.translate.bleu_score import sentence_bleu, corpus_bleu
+__author__ = 'Taneem Jan'
 
-# from classes.inference.Evaluator import *
+from argparse import ArgumentParser
 from Evaluator import *
+
 
 def build_parser():
     parser = ArgumentParser()
@@ -19,8 +17,8 @@ def build_parser():
                         required=True)
     return parser
 
-def main():
 
+def main():
     parser = build_parser()
     options = parser.parse_args()
     original_gui_filepath = options.original_gui_filepath
@@ -28,6 +26,7 @@ def main():
 
     bleu_score = Evaluator.get_sentence_bleu(original_gui_filepath, predicted_gui_filepath)
     print("BLEU score for single GUI: {}".format(bleu_score))
+
 
 if __name__ == "__main__":
     main()

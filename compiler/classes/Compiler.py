@@ -1,7 +1,7 @@
 __author__ = 'Taneem Jan'
 
 import json
-from classes.Node import *
+from .Node import *
 
 
 class Compiler:
