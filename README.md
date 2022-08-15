@@ -4,7 +4,7 @@ Writing code in a programming language for a designed graphical user interface c
 
 The research work and project is done in my undergrad thesis, you can find it here on [my site](https://taneemishere.github.io/projects/project-one.html).
 
-> Live demo is coming really soon ... !
+> Live Demo: [Hugging Face Space](https://huggingface.co/spaces/taneemishere/html-code-generation-from-images-with-deep-neural-networks)
 
 ## The Architecture
 
@@ -109,4 +109,4 @@ cd compiler
 
 - This project is done on top of the original work by Tony Beltramelli's [Paper](https://arxiv.org/pdf/1705.07962.pdf) and the [Datasets](https://github.com/tonybeltramelli/pix2code/tree/master/datasets) from him.
 
-- 👍
+- 👍 Contribution and suggestions are encouraged! just by dropping me an email or pull request.
