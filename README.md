@@ -9,7 +9,7 @@ The research work and project is done in my undergrad thesis, you can find it he
 ## The Architecture
 
 ![Architecture](https://raw.githubusercontent.com/taneemishere/html-code-generation-from-images-with-deep-neural-networks/main/resources-for-md/model-architecture.png)
-As a whole the model is of two parts, the ```autoencoder``` part which captures the images and encode it into inner features and then the decoder tries to regenerate the input image from those lower level features. The language model, which we called as the ```main-model``` that receives the input as intermediate code of that input UI, which is the coded bootstrap elements to what we called as the ```DSL Code```, this part learns the stream of elements via sequential learning provided in embeddings. Then both results of inner features from autoencoder and sequential model are concatenated. At last the LSTMs, which are part of the main-model, take those inner features and generates the intermediate bootstrap code as a result, which is then compiled into HTML code through a web compiler.
+As a whole the model is of two parts, the ```autoencoder``` part which captures the images and encode it into inner features and then the decoder tries to regenerate the input image from those lower level features. The language model, which we called as the ```Main_Model``` that receives the input as intermediate code of that input UI, which is the coded bootstrap elements to what we called as the ```DSL Code```, this part learns the stream of elements via sequential learning provided in embeddings. Then both results of inner features from autoencoder and sequential model are concatenated. At last the LSTMs, which are part of the Main_Model, take those inner features and generates the intermediate code as a result, which is then compiled into HTML code through a web compiler.
 <br>For trained model and weights if you need, drop me an email.
 
 ## Project Structure
@@ -17,10 +17,10 @@ As a whole the model is of two parts, the ```autoencoder``` part which captures 
 ```
 .
 |── bin                     - contains the model pretrained weights in .h5 and .json 
-├── compiler                - contains DSL compiler to bootstrap from intermediate code of .gui format
-│   ├── assets      
+├── compiler                - contains DSL compiler to HTML/bootstrap from intermediate code of .gui format
+│   ├── assets                  - contains the asset of mappings needed for compiler
 │   └── classes
-├── datasets                - contains dataset in zip files which is linked
+├── datasets                - contains dataset in zip files which is linked below in acknowledgement section
 │   ├── web                     
 │   ├── all_data                - will have the data with images and mockups when unziped
 │   ├── eval_set                - will have 250 pairs of images and mockups for evaluation
@@ -100,7 +100,7 @@ cd model
 ```
 cd compiler
 
-# compile .gui file to HTML (Bootstrap style)
+# compile .gui file to HTML code
 # usage: web-compiler.py <input file path>.gui
 ./web-compiler.py ../generated-output/dot_gui.file
 ```

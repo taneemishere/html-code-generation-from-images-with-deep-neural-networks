@@ -1,7 +1,8 @@
 from __future__ import print_function
 
 __author__ = 'Taneem Jan'
-#modified version :: generator for autoencoder
+
+# modified version :: generator for autoencoder
 
 import numpy as np
 
@@ -12,7 +13,8 @@ from model.classes.model.Config import *
 
 class Generator:
     @staticmethod
-    def data_generator(voc, gui_paths, img_paths, batch_size, input_shape, generate_binary_sequences=False, verbose=False, loop_only_one=False, images_only=False):
+    def data_generator(voc, gui_paths, img_paths, batch_size, input_shape, generate_binary_sequences=False,
+                       verbose=False, loop_only_one=False, images_only=False):
         assert len(gui_paths) == len(img_paths)
         voc.create_binary_representation()
 
@@ -67,9 +69,9 @@ class Generator:
 
                         if verbose:
                             print("Yield batch")
-						#include a generator for images only for autoencoder
+                        # include a generator for images only for autoencoder
                         if images_only:
-                            yield(batch_input_images, batch_input_images)
+                            yield (batch_input_images, batch_input_images)
                         else:
                             yield ([batch_input_images, batch_partial_sequences], batch_next_words)
 
