@@ -12,7 +12,7 @@ The research work and project is done in my undergrad thesis, you can find it he
 While training, the AI model receives the images which are passed to the ```Autoencoders``` and it is the first part of the whole model where it is pretrained on the images before the model learns about the code. The autoencoder learns the inner features and recreate the images but with lower dimension and transformed space representation. The second part of our model receives the input code for a mockup image in the form of an intermediate representation of actual code, ```DSL Code``` which is less intensive to the model in learning, feature mapping and helps in controlling the over-fitting problems which are then represented into embeddings, created by a sequential network. The learned parameters from autoencoder and the sequence network are concatenated in the middle layer which is then passed to a recurrent network that learn the parameters and mappings in between the image and the code. Apart from the autoencoder network, the rest of the model is what we called the ```Main_Model```.
 <br>For trained model and weights if you need, drop me an email.
 
-## Project Structure
+## Project Directory Structure
 
 ```
 .
