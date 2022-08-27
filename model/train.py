@@ -10,7 +10,6 @@ import tensorflow as tf
 sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
 
 import sys
-
 from classes.dataset.Generator import *
 from classes.model.Main_Model import *
 from classes.model.autoencoder_image import *

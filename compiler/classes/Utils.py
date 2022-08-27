@@ -26,26 +26,3 @@ class Utils:
             current_spaces.append(space_pos)
 
         return ''.join(results)
-
-    @staticmethod
-    def get_ios_id(length=10):
-        results = []
-
-        while len(results) < length:
-            char = random.choice(string.digits + string.ascii_letters)
-            results.append(char)
-
-        results[3] = "-"
-        results[6] = "-"
-
-        return ''.join(results)
-
-    @staticmethod
-    def get_android_id(length=10):
-        results = []
-
-        while len(results) < length:
-            char = random.choice(string.ascii_letters)
-            results.append(char)
-
-        return ''.join(results)
