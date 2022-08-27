@@ -40,11 +40,6 @@ evaluation_img = Utils.get_preprocessed_img(input_path, IMAGE_SIZE)
 if search_method == "greedy":
     result, _ = sampler.predict_greedy(model, np.array([evaluation_img]))
     print("Result greedy: {}".format(result))
-else:
-    beam_width = int(search_method)
-    print("Search with beam width: {}".format(beam_width))
-    result, _ = sampler.predict_beam_search(model, np.array([evaluation_img]), beam_width=beam_width)
-    print("Result beam: {}".format(result))
 
 with open("{}/{}.gui".format(output_path, file_name), 'w') as out_f:
     out_f.write(result.replace(START_TOKEN, "").replace(END_TOKEN, ""))
